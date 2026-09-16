@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Só entram aqui páginas indexáveis e com conteúdo próprio.
+
+  FORA DE PROPÓSITO:
+    404.html       — página de erro
+    blog.html      — blog construído e desligado (§15b)
+    blog/*.html    — idem
+    projeto.html   — sem ?id= não tem conteúdo; ver abaixo
+
+  QUANDO AS CAPAS ENTRAREM: cada projeto que passar a renderizar ganha um
+  bloco url aqui, copiando um dos de baixo e trocando a loc por
+    https://studiocassa.com.br/projeto.html?id=SLUG
+  com o `id` do dados.js no lugar de SLUG. Hoje nenhum projeto renderiza
+  (faltam capa e logo), então não há o que listar.
+
+  PARA PUBLICAR O BLOG: somar blog.html e cada post, e tirar o noindex.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://studiocassa.com.br/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://studiocassa.com.br/portfolio.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://studiocassa.com.br/contato.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

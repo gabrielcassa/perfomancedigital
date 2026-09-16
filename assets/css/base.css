@@ -1,0 +1,385 @@
+/* ==========================================================================
+   base.css — Studio Cassa
+   Reset, tokens, tipografia e utilitários. Nada de seção aqui: seção e
+   componente moram em site.css.
+
+   CONTRASTES CONFERIDOS (WCAG 2.1, calculados — não estimados):
+     tinta      / papel        17,53:1      marca      / papel        7,50:1
+     tinta      / papel-2      16,07:1      marca      / papel-2      6,87:1
+     tinta      / papel-3      14,56:1      marca      / papel-3      6,23:1
+     tinta      / marca-tint   15,76:1      marca      / marca-tint   6,73:1
+     mid        / papel         5,06:1      branco     / marca        7,95:1
+     mid        / papel-2       4,64:1      branco     / marca-esc   11,09:1
+     escuro-tx  / escuro       13,31:1      branco     / tinta       18,59:1
+     escuro-mid / escuro        6,64:1      erro       / papel        7,03:1
+     escuro-ac  / escuro        8,93:1      branco     / erro         7,46:1
+
+   DUAS COISAS QUE NÃO PODEM VIRAR TEXTO:
+     --light sobre --papel   = 2,39:1 → só filete, ícone e separador.
+     --mid   sobre --papel-3 = 4,20:1 → reprova. Texto secundário sobre
+     --papel-3 usa --tinta. Está escrito aqui porque é fácil errar depois.
+   ========================================================================== */
+
+/* --------------------------------------------------------------- tokens -- */
+:root{
+  /* --- paleta fechada "Estúdio" ------------------------------------------ */
+  --papel:       #FAF8F5;   /* fundo padrão                                  */
+  --papel-2:     #F2EEE7;   /* seção alternada                               */
+  --papel-3:     #E9E3D9;   /* faixas, hover de card                         */
+  --tinta:       #14130F;   /* texto e CTA sólido                            */
+  --mid:         #6F6A62;   /* texto secundário                              */
+  --light:       #A8A29A;   /* SÓ linha e ícone decorativo — NUNCA texto     */
+  --borda:       #E6E1D8;
+  --borda-forte: #D5CDBF;
+  --marca:       #0E5C48;   /* verde profundo                                */
+  --marca-esc:   #0A4436;   /* hover do botão verde                          */
+  --marca-tint:  #E3EFEA;   /* fundo de badge                                */
+  --erro:        #9E2B1C;
+
+  /* seção escura — só a prova de números e o contato final */
+  --escuro:      #0F2A22;
+  --escuro-tx:   #F2EFE9;
+  --escuro-mid:  #9DAFA8;
+  --escuro-ac:   #8FD4B8;
+  --escuro-bd:   #25453A;
+
+  /* --- tipografia -------------------------------------------------------- */
+  --fonte-titulo:   "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fonte-texto:    "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fonte-destaque: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  --t-h1:     clamp(2.4rem, 6vw, 4.2rem);
+  --t-h2:     clamp(1.9rem, 4vw, 3rem);
+  --t-h3:     clamp(1.15rem, 2vw, 1.5rem);
+  --t-corpo:  1.0625rem;
+  --t-lead:   clamp(1.0625rem, 1.5vw, 1.25rem);
+  --t-mini:   0.875rem;
+  --t-rotulo: 0.72rem;
+
+  /* --- espaçamento (escala de 4px) --------------------------------------- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px;
+
+  /* --- raios ------------------------------------------------------------- */
+  --r-sm: 6px; --r-md: 10px; --r-lg: 16px; --r-xl: 24px; --r-pill: 999px;
+
+  /* --- sombras (discretas: o site é de papel, não de vidro) -------------- */
+  --sombra-1: 0 1px 2px rgba(20,19,15,.04), 0 2px 8px rgba(20,19,15,.04);
+  --sombra-2: 0 2px 4px rgba(20,19,15,.05), 0 12px 32px rgba(20,19,15,.08);
+
+  /* --- movimento --------------------------------------------------------- */
+  --transicao: .28s ease-out;
+
+  /* o ✓ das listas, como máscara — a cor vem do CSS, não do arquivo */
+  --check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M3.5 8.5l3 3 6-6.5'/%3E%3C/svg%3E");
+
+  /* --- layout ------------------------------------------------------------ */
+  --container: 1180px;
+  --gutter: 24px;
+  --secao-y: clamp(72px, 10vw, 132px);
+  --nav-h: 72px;
+}
+
+/* ---------------------------------------------------------------- reset -- */
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + var(--s-5));
+}
+
+body{
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--fonte-texto);
+  font-size: var(--t-corpo);
+  line-height: 1.65;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* trava de rolagem do menu mobile e, depois, do modal de projeto */
+body.travado{ overflow: hidden; }
+
+h1, h2, h3, h4, p, figure, blockquote, ul, ol, dl{ margin: 0; }
+ul, ol{ padding: 0; list-style: none; }
+
+img, video, svg{ display: block; max-width: 100%; }
+img, video{ height: auto; }
+
+a{ color: inherit; text-decoration: none; }
+
+button, input, select, textarea{ font: inherit; color: inherit; margin: 0; }
+button{ background: none; border: 0; padding: 0; cursor: pointer; }
+
+/* Foco visível obrigatório. Nunca outline:none sem substituto. */
+:focus-visible{
+  outline: 2px solid var(--marca);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+.secao--escura :focus-visible{ outline-color: var(--escuro-ac); }
+
+::selection{ background: var(--marca-tint); color: var(--tinta); }
+
+/* ----------------------------------------------------------- tipografia -- */
+h1, h2, h3, h4{
+  font-family: var(--fonte-titulo);
+  font-weight: 600;          /* 700 fica pesado nesta família */
+  line-height: 1.12;
+  color: var(--tinta);
+  text-wrap: balance;
+}
+
+h1{ font-size: var(--t-h1); letter-spacing: -.03em; line-height: 1.04; }
+h2{ font-size: var(--t-h2); letter-spacing: -.02em; }
+h3{ font-size: var(--t-h3); letter-spacing: -.01em; }
+
+/* A assinatura do site: uma palavra por título em serifa itálica.
+   1.06em porque a altura-de-x da Instrument Serif é menor que a da sans. */
+em{
+  font-family: var(--fonte-destaque);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.06em;
+  letter-spacing: 0;
+  color: var(--marca);
+}
+.secao--escura em{ color: var(--escuro-ac); }
+
+p{ color: var(--mid); }
+p strong{ color: var(--tinta); font-weight: 600; }
+
+.lead{ font-size: var(--t-lead); line-height: 1.55; }
+
+.rotulo{
+  font-family: var(--fonte-texto);
+  font-size: var(--t-rotulo);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--mid);
+}
+.secao--escura .rotulo{ color: var(--escuro-mid); }
+
+/* --------------------------------------------------------------- layout -- */
+.container{
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.secao{ padding-block: var(--secao-y); }
+.secao--papel2{ background: var(--papel-2); }
+.secao--escura{ background: var(--escuro); color: var(--escuro-tx); }
+.secao--escura h1,
+.secao--escura h2,
+.secao--escura h3{ color: var(--escuro-tx); }
+.secao--escura p{ color: var(--escuro-mid); }
+
+/* cabeçalho padrão de seção: rótulo + H2 com <em> + linha de apoio */
+.cabeca{ max-width: 46rem; }
+.cabeca .rotulo{ display: block; margin-bottom: var(--s-4); }
+.cabeca h1 + p,
+.cabeca h2 + p{ margin-top: var(--s-4); }
+.cabeca--centro{ margin-inline: auto; text-align: center; }
+
+/* -------------------------------------------------------------- botões --- */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: 14px var(--s-5);
+  border-radius: var(--r-pill);
+  font-family: var(--fonte-texto);
+  font-size: .9375rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--transicao), color var(--transicao),
+              border-color var(--transicao), transform var(--transicao);
+}
+.btn:active{ transform: translateY(1px); }
+
+.btn--marca{ background: var(--marca); color: #fff; }        /* 7,95:1 */
+.btn--marca:hover{ background: var(--marca-esc); }           /* 11,09:1 */
+
+.btn--tinta{ background: var(--tinta); color: var(--papel); }
+.btn--tinta:hover{ background: #000; }
+
+.btn--linha{ background: transparent; color: var(--tinta); border-color: var(--borda-forte); }
+.btn--linha:hover{ background: var(--papel-3); border-color: var(--tinta); }
+
+.btn--claro{ background: var(--escuro-ac); color: var(--escuro); }
+.btn--claro:hover{ background: #A6E0C8; }
+
+.btn--g{ padding: 18px var(--s-6); font-size: 1.0625rem; }
+
+/* link sublinhado — o CTA secundário do site inteiro */
+.link-sub{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-weight: 600;
+  font-size: .9375rem;
+  color: var(--tinta);
+  padding-block: 2px;
+  border-bottom: 1px solid var(--borda-forte);
+  transition: color var(--transicao), border-color var(--transicao);
+}
+.link-sub:hover{ color: var(--marca); border-color: var(--marca); }
+.secao--escura .link-sub{ color: var(--escuro-tx); border-color: var(--escuro-bd); }
+.secao--escura .link-sub:hover{ color: var(--escuro-ac); border-color: var(--escuro-ac); }
+
+.seta{ flex: none; transition: transform var(--transicao); }
+.btn:hover .seta,
+.link-sub:hover .seta{ transform: translateX(3px); }
+
+/* --------------------------------------------------------------- badge --- */
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 7px 14px 7px 12px;
+  border-radius: var(--r-pill);
+  background: var(--marca-tint);
+  color: var(--marca);                /* 6,73:1 */
+  font-size: .8125rem;
+  font-weight: 600;
+  letter-spacing: -.005em;
+  line-height: 1.3;
+}
+.badge__estrela{ flex: none; }
+.secao--escura .badge{
+  background: rgba(143,212,184,.12);
+  color: var(--escuro-ac);
+  border: 1px solid var(--escuro-bd);
+}
+
+/* ---------------------------------------------------------- utilitários --
+   Estes são os blocos que as seções reaproveitam. Antes de escrever CSS novo
+   para uma seção, veja se não é um destes com um modificador. */
+
+/* grade de 2 colunas: empilha no celular, lado a lado a partir de 960px */
+.grade-2{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-7);
+  align-items: start;
+}
+
+/* grade de cards que se acomoda sozinha */
+.cards{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-5);
+  margin-top: var(--s-8);
+}
+
+/* card padrão: borda de 1px, sem sombra, sobe 4px no hover */
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  align-items: flex-start;
+  padding: var(--s-6);
+  border: 1px solid var(--borda);
+  border-radius: var(--r-lg);
+  background: var(--papel);
+  transition: transform var(--transicao), border-color var(--transicao);
+}
+.card:hover{ transform: translateY(-4px); border-color: var(--borda-forte); }
+.secao--papel2 .card{ background: var(--papel); }
+
+/* Lista com ✓ — o ícone é o único lugar de marca dentro do card.
+   O check é pseudo-elemento, e não SVG no HTML: assim a lista fica igual
+   quer venha do dados.js, quer esteja escrita direto numa página. */
+.lista-check{ display: flex; flex-direction: column; gap: var(--s-3); }
+.lista-check li{
+  position: relative;
+  padding-left: 26px;
+  font-size: var(--t-mini);
+  line-height: 1.5;
+  color: var(--mid);
+}
+.lista-check li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  background: var(--marca);
+  -webkit-mask: var(--check) center / 16px 16px no-repeat;
+          mask: var(--check) center / 16px 16px no-repeat;
+}
+
+@media (min-width: 760px){
+  .cards--3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cards--2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 960px){
+  .grade-2{ grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-8); }
+}
+
+.filete{ border: 0; border-top: 1px solid var(--borda); margin: 0; }
+.secao--escura .filete{ border-color: var(--escuro-bd); }
+
+.so-leitor{
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* pular para o conteúdo — primeiro foco de toda página */
+.pular{
+  position: absolute;
+  top: var(--s-3);
+  left: var(--s-3);
+  z-index: 200;
+  padding: 12px var(--s-5);
+  border-radius: var(--r-pill);
+  background: var(--tinta);
+  color: var(--papel);
+  font-size: .875rem;
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform var(--transicao);
+}
+.pular:focus-visible{ transform: translateY(0); }
+
+[hidden]{ display: none !important; }
+
+/* ----------------------------------------------------------- movimento --- */
+/* Entrada padrão: 18px para cima + opacidade, escalonada por data-atraso. */
+.rv{
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .55s ease-out, transform .55s ease-out;
+  transition-delay: var(--atraso, 0ms);
+}
+.rv.in{ opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *, *::before, *::after{
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .rv{ opacity: 1; transform: none; }
+}

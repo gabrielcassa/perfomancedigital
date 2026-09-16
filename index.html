@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- RASCUNHO: enquanto o site vive em gabrielcassa.github.io, ele fica fora do
+     Google. Para publicar de verdade: apague este bloco das 4 paginas, renomeie
+     CNAME.desativado para CNAME e aponte o DNS. Ver README, secao "Modo rascunho". -->
+<meta name="robots" content="noindex, nofollow">
+
+<title>Studio Cassa — lojas Nuvemshop feitas sob medida</title>
+<meta name="description" content="Crio, migro e otimizo lojas Nuvemshop sob medida. 10 e-commerces completos entregues. Fale comigo no WhatsApp e receba um orçamento.">
+<link rel="canonical" href="https://studiocassa.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Studio Cassa">
+<meta property="og:url" content="https://studiocassa.com.br/">
+<meta property="og:title" content="Studio Cassa — lojas Nuvemshop feitas sob medida">
+<meta property="og:description" content="Crio, migro e otimizo lojas Nuvemshop sob medida. 10 e-commerces completos entregues.">
+<meta property="og:image" content="https://studiocassa.com.br/assets/img/og/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Studio Cassa — lojas Nuvemshop feitas sob medida">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Studio Cassa — lojas Nuvemshop feitas sob medida">
+<meta name="twitter:description" content="Crio, migro e otimizo lojas Nuvemshop sob medida. 10 e-commerces completos entregues.">
+<meta name="twitter:image" content="https://studiocassa.com.br/assets/img/og/og-image.png">
+
+<link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#FAF8F5">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@1&amp;display=swap">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+
+<script type="application/ld+json" data-jsonld>
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studiocassa.com.br/#studio",
+  "name": "Studio Cassa",
+  "description": "Criação, migração e otimização de lojas Nuvemshop sob medida.",
+  "url": "https://studiocassa.com.br/",
+  "founder": { "@type": "Person", "name": "Gabriel Cassa" },
+  "foundingDate": "2024",
+  "priceRange": "Sob orçamento",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "São João del-Rei",
+    "addressRegion": "MG",
+    "addressCountry": "BR"
+  },
+  "areaServed": { "@type": "Country", "name": "Brasil" },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+5532999144851",
+    "email": "gabriel.cassa02@outlook.com",
+    "availableLanguage": ["pt-BR"]
+  },
+  "knowsAbout": ["Nuvemshop", "E-commerce", "Migração de plataforma", "CRO", "Landing page"]
+}
+</script>
+</head>
+
+<body>
+
+<a class="pular" href="#conteudo" data-i18n="nav.pular">Ir para o conteúdo</a>
+
+<!-- ======================================================================
+     NAV
+     ====================================================================== -->
+<header class="nav">
+  <div class="container nav__interno">
+
+    <a class="marca" href="index.html" aria-label="Studio Cassa — página inicial">
+      <span class="marca__nome">Studio <i>Cassa</i></span>
+      <span class="marca__tag" data-i18n="nav.tagline">lojas Nuvemshop sob medida</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Principal">
+      <a class="nav__link" href="#sobre"     data-i18n="nav.sobre">Sobre</a>
+      <a class="nav__link" href="#servicos"  data-i18n="nav.servicos">Serviços</a>
+      <a class="nav__link" href="#processo"  data-i18n="nav.processo">Como funciona</a>
+      <a class="nav__link" href="#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+      <a class="nav__link" href="#contato"   data-i18n="nav.contato">Contato</a>
+    </nav>
+
+    <!-- seletor de idioma: fica vazio enquanto IDIOMAS_ATIVOS tiver só 'pt' -->
+    <div class="nav__idiomas" data-idiomas hidden></div>
+
+    <a class="btn btn--marca nav__cta" data-zap="Olá, Gabriel! Vim pelo site e quero falar sobre um projeto."
+       href="https://wa.me/5532999144851" data-i18n="nav.cta">Falar no WhatsApp</a>
+
+    <button class="hamburguer" type="button" aria-expanded="false" aria-controls="menu"
+            aria-label="Menu" data-i18n="nav.menuRotulo" data-i18n-attr="aria-label">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- menu mobile em tela cheia -->
+<div class="menu" id="menu" role="dialog" aria-modal="true"
+     aria-label="Menu" data-i18n="nav.menuRotulo" data-i18n-attr="aria-label">
+  <div class="container">
+    <nav class="menu__lista" aria-label="Menu principal">
+      <a class="menu__link" href="#sobre"     data-i18n="nav.sobre">Sobre</a>
+      <a class="menu__link" href="#servicos"  data-i18n="nav.servicos">Serviços</a>
+      <a class="menu__link" href="#processo"  data-i18n="nav.processo">Como funciona</a>
+      <a class="menu__link" href="#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+      <a class="menu__link" href="#contato"   data-i18n="nav.contato">Contato</a>
+    </nav>
+    <div class="menu__pe">
+      <a class="btn btn--marca" data-zap="Olá, Gabriel! Vim pelo site e quero falar sobre um projeto."
+         href="https://wa.me/5532999144851" data-i18n="nav.cta">Falar no WhatsApp</a>
+      <!-- sem href de propósito: o endereço do Instagram não pode estar escrito
+           em HTML nenhum (§15d). Quem põe o href é o site.js, a partir da
+           constante INSTAGRAM. Sem JS isto não é link, e não é link quebrado. -->
+      <a class="menu__contato" data-insta data-insta-handle>@xpinformatica_</a>
+      <a class="menu__contato" data-email data-email-texto
+         href="mailto:gabriel.cassa02@outlook.com">gabriel.cassa02@outlook.com</a>
+    </div>
+  </div>
+</div>
+
+<main id="conteudo">
+
+  <!-- ====================================================================
+       HERO
+       ==================================================================== -->
+  <section class="hero">
+    <div class="container hero__interno">
+
+      <!-- o conteúdo do selo (texto, estrela ou imagem, e o link) vem todo do
+             objeto SELO no dados.js — aqui só se marca o lugar -->
+        <p class="badge rv" data-selo hidden></p>
+
+      <h1 class="rv" data-atraso="80" data-i18n="hero.h1" data-i18n-html>
+        Loja Nuvemshop<br>feita <em>sob medida</em>
+      </h1>
+
+      <p class="hero__texto rv" data-atraso="160" data-i18n="hero.texto">
+        A gente constrói, migra e melhora loja na Nuvemshop desde 2024.
+        São 10 e-commerces completos entregues — cada um com a cara da marca
+        dele, não a do tema.
+      </p>
+
+      <div class="hero__ctas rv" data-atraso="240">
+        <a class="btn btn--marca btn--g"
+           data-zap="Olá, Gabriel! Vim pelo site e quero uma loja na Nuvemshop."
+           href="https://wa.me/5532999144851">
+          <span data-i18n="hero.cta1">Quero minha loja</span>
+          <svg class="seta" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/>
+          </svg>
+        </a>
+        <a class="link-sub" href="#portfolio">
+          <span data-i18n="hero.cta2">Ver portfólio</span>
+          <svg class="seta" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Faixa de logos. É montada a partir de PROJETOS pelo site.js e some
+           inteira se nenhum projeto tiver logo — que é o caso hoje.
+           TODO: soltar os PNG transparentes em _logos/ e rodar
+           .\prepara-imagens.ps1 para a faixa aparecer. -->
+      <div class="confianca rv" data-atraso="320" data-logos hidden>
+        <span class="rotulo" data-i18n="hero.confianca">Marcas que já confiaram</span>
+        <div class="confianca__logos"></div>
+      </div>
+
+      <!-- barra de 3 números — os mesmos que voltam na seção Sobre -->
+      <dl class="numeros-barra rv" data-atraso="400">
+        <div class="numeros-barra__item">
+          <dt class="numeros-barra__n" data-i18n="hero.n1">10</dt>
+          <dd class="numeros-barra__r" data-i18n="hero.r1">e-commerces completos</dd>
+        </div>
+        <div class="numeros-barra__item">
+          <dt class="numeros-barra__n" data-i18n="hero.n2">19</dt>
+          <dd class="numeros-barra__r" data-i18n="hero.r2">otimizações em lojas e sites já no&nbsp;ar</dd>
+        </div>
+        <div class="numeros-barra__item">
+          <dt class="numeros-barra__n" data-i18n="hero.n3">+50</dt>
+          <dd class="numeros-barra__r" data-i18n="hero.r3">páginas de produto exclusivas para best sellers</dd>
+        </div>
+      </dl>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       3. SOBRE
+       ==================================================================== -->
+  <section class="secao sobre" id="sobre">
+    <div class="container sobre__grade">
+
+      <!-- Sem foto do Gabriel ainda: no lugar vai uma composição gráfica, não
+           uma imagem de banco. TODO: trocar este bloco por <img> quando a foto
+           chegar (junto com os prints e as logos). -->
+      <div class="selo-grafico rv" aria-hidden="true">
+        <span class="selo-grafico__marca">Studio <i>Cassa</i></span>
+        <span class="selo-grafico__linha"></span>
+        <span class="selo-grafico__tag">lojas Nuvemshop<br>feitas sob medida</span>
+        <span class="selo-grafico__pe">São João del-Rei · MG<br>desde 2024</span>
+      </div>
+
+      <div class="sobre__texto">
+        <span class="rotulo rv" data-i18n="sobre.rotulo">Quem faz</span>
+        <h2 class="rv" data-atraso="80" data-i18n="sobre.h2" data-i18n-html>
+          Uma pessoa só. E isso é <em>a vantagem</em>.
+        </h2>
+
+        <p class="lead rv" data-atraso="160" data-i18n="sobre.p1">
+          Me chamo Gabriel Cassa. Desde 2024 eu construo loja na Nuvemshop —
+          do zero, ou migrando de uma plataforma que já não dava conta.
+          Comecei mexendo no CSS de tema pronto e acabei fazendo loja inteira.
+        </p>
+
+        <p class="rv" data-atraso="240" data-i18n="sobre.p2">
+          Trabalho sozinho de propósito. Quem responde no WhatsApp é quem
+          desenha, quem escreve o código e quem entrega. Não tem repasse para
+          terceiro, e você não precisa explicar seu negócio três vezes.
+        </p>
+
+        <div class="sobre__botoes rv" data-atraso="320">
+          <a class="btn btn--linha" href="#portfolio" data-i18n="sobre.cta1">Ver portfólio</a>
+          <a class="link-sub" data-zap="Olá, Gabriel! Vim pelo site e quero falar sobre um projeto."
+             href="https://wa.me/5532999144851">
+            <span data-i18n="nav.cta">Falar no WhatsApp</span>
+            <svg class="seta" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <dl class="numeros-barra rv" data-atraso="400">
+          <div class="numeros-barra__item">
+            <dt class="numeros-barra__n" data-i18n="hero.n1">10</dt>
+            <dd class="numeros-barra__r" data-i18n="hero.r1">e-commerces completos</dd>
+          </div>
+          <div class="numeros-barra__item">
+            <dt class="numeros-barra__n" data-i18n="hero.n2">19</dt>
+            <dd class="numeros-barra__r" data-i18n="hero.r2">otimizações em lojas e sites já no&nbsp;ar</dd>
+          </div>
+          <div class="numeros-barra__item">
+            <dt class="numeros-barra__n" data-i18n="hero.n3">+50</dt>
+            <dd class="numeros-barra__r" data-i18n="hero.r3">páginas de produto exclusivas para best sellers</dd>
+          </div>
+        </dl>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       4. MARQUEE — as palavras do posicionamento, rolando
+       ==================================================================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__trilho">
+      <!-- o conteúdo é duplicado: o segundo <ul> é o que faz o laço fechar
+           sem emenda quando o trilho anda -50% -->
+      <ul class="marquee__lista" data-marquee>
+        <li data-i18n="mq.1">Nuvemshop</li><li data-i18n="mq.2">migração de plataforma</li><li data-i18n="mq.3">página de produto</li>
+        <li data-i18n="mq.4">tema Ipanema</li><li data-i18n="mq.5">CSS customizado</li><li data-i18n="mq.6">landing page</li>
+        <li data-i18n="mq.7">otimização de loja no ar</li><li data-i18n="mq.8">tema Flex</li><li data-i18n="mq.9">e-commerce sob medida</li>
+      </ul>
+      <ul class="marquee__lista" data-marquee></ul>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       5. ESSÊNCIA
+       ==================================================================== -->
+  <section class="secao">
+    <div class="container">
+      <div class="cabeca cabeca--centro">
+        <span class="rotulo rv" data-i18n="essencia.rotulo">Essência</span>
+        <h2 class="rv" data-atraso="80" data-i18n="essencia.h2" data-i18n-html>
+          O que eu faço quando <em>ninguém está olhando</em>.
+        </h2>
+      </div>
+
+      <div class="cards cards--3">
+        <article class="card rv" data-atraso="80">
+          <span class="rotulo" data-i18n="essencia.c1r">Missão</span>
+          <h3 data-i18n="essencia.c1t">Tirar a loja do template</h3>
+          <p data-i18n="essencia.c1p">
+            Fazer loja com a cara da marca, não a cara do tema. Cada projeto sai
+            com decisão de design tomada para aquele negócio, e não copiada do
+            anterior.
+          </p>
+        </article>
+
+        <article class="card rv" data-atraso="160">
+          <span class="rotulo" data-i18n="essencia.c2r">Visão</span>
+          <h3 data-i18n="essencia.c2t">Ser a primeira ligação</h3>
+          <p data-i18n="essencia.c2p">
+            Que quem vende online pense em mim antes de pensar em plataforma —
+            porque o problema quase nunca é a plataforma, é como ela foi montada.
+          </p>
+        </article>
+
+        <article class="card rv" data-atraso="240">
+          <span class="rotulo" data-i18n="essencia.c3r">Valores</span>
+          <h3 data-i18n="essencia.c3t">Combinado escrito</h3>
+          <p data-i18n="essencia.c3p">
+            Escopo por escrito, com o que entra e o que não entra. Prazo dito na
+            frente. Se alguma coisa atrasar, você fica sabendo por mim primeiro.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       6. A PLATAFORMA — sobre a Nuvemshop, nunca sobre a minha relação com ela
+       ==================================================================== -->
+  <section class="secao secao--papel2">
+    <div class="container plataforma">
+      <div class="cabeca">
+        <span class="rotulo rv" data-i18n="plat.rotulo">A plataforma</span>
+        <h2 class="rv" data-atraso="80" data-i18n="plat.h2" data-i18n-html>
+          Por que eu construo <em>na Nuvemshop</em>.
+        </h2>
+        <p class="rv" data-atraso="160" data-i18n="plat.apoio">
+          Dá para fazer loja bonita em qualquer lugar. O que muda é o que sobra
+          para você depois que eu entrego.
+        </p>
+      </div>
+
+      <ul class="razoes">
+        <li class="razao rv" data-atraso="80">
+          <h3 data-i18n="plat.r1t">O tema aceita código</h3>
+          <p data-i18n="plat.r1p">
+            Dá para editar o tema por dentro. É isso que permite página de
+            produto exclusiva e layout que não parece o do vizinho.
+          </p>
+        </li>
+        <li class="razao rv" data-atraso="160">
+          <h3 data-i18n="plat.r2t">O painel é para o lojista</h3>
+          <p data-i18n="plat.r2p">
+            Você cadastra produto, troca banner e vê pedido sem me chamar.
+            Entrego com treinamento em vídeo para não depender de mim no dia a dia.
+          </p>
+        </li>
+        <li class="razao rv" data-atraso="240">
+          <h3 data-i18n="plat.r3t">Migrar não é recomeçar</h3>
+          <p data-i18n="plat.r3p">
+            Produto, categoria e cliente vêm junto, e as URLs antigas são
+            redirecionadas — o que você já construiu no Google não vai embora.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       7. RESULTADO REAL (vídeo) — PRONTA, PORÉM DESLIGADA
+       Não existe vídeo nem print de loja no repositório ainda, e a regra é
+       não publicar seção com conteúdo fantasma. O CSS do mockup de celular
+       já está em site.css.
+       PARA LIGAR: soltar o arquivo em assets/img/ (ou um .mp4), descomentar
+       este bloco e apontar o <source>/<img>. Nada mais.
+       ==================================================================== -->
+  <!--
+  <section class="secao resultado">
+    <div class="container resultado__grade">
+      <div>
+        <span class="rotulo">Resultado real</span>
+        <h2>Não é print de portfólio. É <em>loja vendendo</em>.</h2>
+        <p>TODO: uma linha sobre a loja mostrada ao lado.</p>
+        <a class="btn btn--marca" data-zap="Olá, Gabriel! Vi o vídeo no site e quero uma loja assim." href="https://wa.me/5532999144851">Quero uma assim</a>
+      </div>
+      <div class="celular">
+        <div class="celular__notch"></div>
+        <video class="celular__tela" muted playsinline loop preload="metadata" width="270" height="585">
+          <source src="TODO.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ====================================================================
+       8. PROVA DE NÚMEROS — fundo escuro (1 de 2 no site inteiro)
+       ==================================================================== -->
+  <section class="secao secao--escura">
+    <div class="container">
+      <div class="cabeca cabeca--centro">
+        <span class="rotulo rv" data-i18n="num.rotulo">Números</span>
+        <h2 class="rv" data-atraso="80" data-i18n="num.h2" data-i18n-html>
+          Sem estimativa. Só o que <em>já está no ar</em>.
+        </h2>
+      </div>
+
+      <dl class="relatorio">
+        <div class="relatorio__item rv" data-atraso="80">
+          <dt class="relatorio__n" data-contador data-n="10">10</dt>
+          <dd class="relatorio__r" data-i18n="hero.r1">e-commerces completos</dd>
+        </div>
+        <div class="relatorio__item rv" data-atraso="160">
+          <dt class="relatorio__n" data-contador data-n="19">19</dt>
+          <dd class="relatorio__r" data-i18n="hero.r2">otimizações em lojas e sites já no&nbsp;ar</dd>
+        </div>
+        <div class="relatorio__item rv" data-atraso="240">
+          <dt class="relatorio__n" data-contador data-n="50" data-prefixo="+">+50</dt>
+          <dd class="relatorio__r" data-i18n="hero.r3">páginas de produto exclusivas para best sellers</dd>
+        </div>
+        <div class="relatorio__item rv" data-atraso="320">
+          <dt class="relatorio__n" data-contador data-n="6">6</dt>
+          <dd class="relatorio__r" data-i18n="num.r4">landing pages</dd>
+        </div>
+      </dl>
+
+      <div class="relatorio__pe rv" data-atraso="400">
+        <!-- o conteúdo do selo (texto, estrela ou imagem, e o link) vem todo do
+             objeto SELO no dados.js — aqui só se marca o lugar -->
+        <p class="badge" data-selo hidden></p>
+        <p class="relatorio__data" data-i18n="num.data">Conferido em setembro de 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       9. SERVIÇOS — abas montadas a partir de SERVICOS do dados.js.
+       Sem preço nesta versão (§15a).
+       ==================================================================== -->
+  <section class="secao" id="servicos">
+    <div class="container">
+      <div class="cabeca cabeca--centro">
+        <span class="rotulo rv" data-i18n="serv.rotulo">Serviços</span>
+        <h2 class="rv" data-atraso="80" data-i18n="serv.h2" data-i18n-html>
+          Escolha pelo problema, não <em>pelo pacote</em>.
+        </h2>
+        <p class="rv" data-atraso="160" data-i18n="serv.apoio">
+          Me diga em que pé está a sua loja hoje. O resto a gente ajusta na conversa.
+        </p>
+      </div>
+
+      <!-- as abas e os cards são impressos pelo site.js; se SERVICOS estiver
+           vazio, a seção inteira é removida -->
+      <div class="abas" data-servicos>
+        <div class="abas__tira" role="tablist" aria-label="Tipos de serviço"></div>
+        <div class="abas__painéis"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       10. COMO FUNCIONA — timeline a partir de PROCESSO do dados.js
+       ==================================================================== -->
+  <section class="secao secao--papel2" id="processo">
+    <div class="container">
+      <div class="cabeca">
+        <span class="rotulo rv" data-i18n="proc.rotulo">Como funciona</span>
+        <h2 class="rv" data-atraso="80" data-i18n="proc.h2" data-i18n-html>
+          Sete passos. Nenhum <em>improviso</em>.
+        </h2>
+        <p class="rv" data-atraso="160" data-i18n="proc.apoio">
+          Do primeiro "oi" no WhatsApp até você tocando a loja sozinho.
+        </p>
+      </div>
+
+      <ol class="linha-tempo" data-processo></ol>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       11. PORTFÓLIO — tudo sai de PROJETOS do dados.js. Nenhum projeto é
+       chumbado aqui. O carrossel some se nenhum "destaque" passar nas duas
+       travas; a lista "Também passaram por aqui" some se não houver citação.
+       ==================================================================== -->
+  <section class="secao" id="portfolio">
+    <div class="container">
+      <div class="cabeca">
+        <span class="rotulo rv" data-i18n="port.rotulo">Portfólio</span>
+        <h2 class="rv" data-atraso="80" data-i18n="port.h2" data-i18n-html>
+          Loja de verdade, <em>no ar agora</em>.
+        </h2>
+        <p class="rv" data-atraso="160" data-i18n="port.apoio">
+          Cada card abre o caso: o que o cliente tinha antes, o que eu entreguei
+          e o endereço para você conferir.
+        </p>
+      </div>
+    </div>
+
+    <div class="carrossel rv" data-carrossel hidden>
+      <div class="container carrossel__topo">
+        <div class="carrossel__setas">
+          <button class="seta-btn" type="button" data-carrossel-antes
+                  aria-label="Projeto anterior" data-i18n="port.antes" data-i18n-attr="aria-label">
+            <svg width="17" height="17" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" d="M13 8H4M7.5 3.5L4 8l3.5 4.5"/>
+            </svg>
+          </button>
+          <button class="seta-btn" type="button" data-carrossel-depois
+                  aria-label="Próximo projeto" data-i18n="port.depois" data-i18n-attr="aria-label">
+            <svg width="17" height="17" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" d="M3 8h9M8.5 3.5L12 8l-3.5 4.5"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- o trilho sangra até a borda de propósito: mostra que há mais ao lado -->
+      <!-- div, não ul: o card é um <article> e um <li> intermediário esmagaria
+           o card de 320px para 45px (o seletor é .carrossel__trilho > .projeto) -->
+      <div class="carrossel__trilho" tabindex="0" role="group"
+           aria-label="Projetos em destaque" data-i18n="port.grupo" data-i18n-attr="aria-label"></div>
+
+      <div class="container carrossel__pe">
+        <a class="btn btn--linha" href="portfolio.html" data-i18n="port.todos">
+          Ver todos os projetos
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="citacoes rv" data-citacoes hidden>
+        <h3 data-i18n="port.tambem">Também passaram por aqui</h3>
+        <ul class="citacoes__lista"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       12. FAIXA DE LOGOS — a prova social de novo, agora com todos.
+       Sem logo no dados.js, o site.js remove a faixa inteira.
+       ==================================================================== -->
+  <div class="container">
+    <div class="confianca confianca--larga rv" data-logos hidden>
+      <span class="rotulo" data-i18n="port.marcas">Marcas que passaram por aqui</span>
+      <div class="confianca__logos"></div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       13. DEPOIMENTOS — vem de DEPOIMENTOS. Array vazio remove a seção.
+       Avatar é a inicial sobre a cor da marca: não invento foto de cliente.
+       ==================================================================== -->
+  <section class="secao secao--papel2">
+    <div class="container" data-depoimentos hidden>
+      <div class="cabeca cabeca--centro">
+        <span class="rotulo rv" data-i18n="depo.rotulo">Depoimentos</span>
+        <h2 class="rv" data-atraso="80" data-i18n="depo.h2" data-i18n-html>
+          Quem já passou por isso <em>conta melhor</em>.
+        </h2>
+      </div>
+      <div class="cards cards--3"></div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       14. BENEFÍCIO DA PLATAFORMA — não existe nesta versão.
+       O bloco depende de LINK_AFILIADO_NUVEM, que está como "omitir" no
+       BLOCO 0. Sem link e sem cupom, seria uma seção sem conteúdo.
+       ==================================================================== -->
+
+  <!-- BLOG: descomentar este bloco + tirar o noindex de blog.html para publicar -->
+  <!--
+  <section class="secao">
+    <div class="container">
+      <div class="cabeca">
+        <span class="rotulo" data-i18n="blog.rotulo">Blog</span>
+        <h2 data-i18n="blog.h2" data-i18n-html>O que eu aprendo <em>fazendo</em>.</h2>
+        <p data-i18n="blog.apoio">Texto sobre e-commerce escrito por quem constrói, não por quem só opina.</p>
+      </div>
+      <div class="cards cards--3" data-posts></div>
+      <div class="blog__mais">
+        <a class="link-sub" href="blog.html"><span data-i18n="blog.todos">Ver todos os artigos</span>
+          <svg class="seta" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" d="M3 8h9M8.5 4.5L12 8l-3.5 3.5"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ====================================================================
+       16. CONTATO FINAL — fundo escuro (2 de 2 no site inteiro).
+       O título é um H2, não um H1: só existe um H1 por página, e ele é o
+       do hero. O tamanho de H1 vem da classe, não da tag.
+       ==================================================================== -->
+  <section class="secao secao--escura contato-final" id="contato">
+    <div class="container contato-final__interno">
+
+      <span class="rotulo rv" data-i18n="cta.rotulo">Contato</span>
+
+      <h2 class="titulao rv" data-atraso="80" data-i18n="cta.h2" data-i18n-html>
+        Sua loja não vai <em>se construir sozinha</em>.
+      </h2>
+
+      <p class="lead rv" data-atraso="160" data-i18n="cta.apoio">
+        Me conta em que pé está: ideia no papel, loja parada ou loja vendendo
+        que podia vender mais. Eu respondo no mesmo dia.
+      </p>
+
+      <a class="btn btn--claro btn--g rv" data-atraso="240"
+         data-zap="Olá, Gabriel! Vim pelo site e quero começar um projeto."
+         href="https://wa.me/5532999144851">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.87 9.87 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2zm0 18.06h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14 0-.31-.01-.48-.01a.93.93 0 0 0-.67.31c-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.16 1.77 2.71 4.3 3.8.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.19.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/>
+        </svg>
+        <span data-i18n="cta.botao">Chamar no WhatsApp</span>
+      </a>
+
+      <ul class="contato-final__linhas rv" data-atraso="320">
+        <li><a data-insta data-insta-handle>@xpinformatica_</a></li>
+        <li><a data-email href="mailto:gabriel.cassa02@outlook.com">gabriel.cassa02@outlook.com</a></li>
+        <li><span data-i18n="rodape.horario">Seg a sex, 9h às 18h</span></li>
+        <li><a class="contato-final__pagina" href="contato.html" data-i18n="cta.pagina">Outras formas de falar comigo</a></li>
+      </ul>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================================================================
+     RODAPÉ
+     ====================================================================== -->
+<footer class="rodape">
+  <div class="container">
+
+    <div class="rodape__topo">
+
+      <div class="rodape__sobre">
+        <span class="marca__nome">Studio <i>Cassa</i></span>
+        <p data-i18n="rodape.sobre">
+          Lojas Nuvemshop feitas sob medida, de São João del-Rei para o Brasil inteiro.
+        </p>
+        <!-- o conteúdo do selo (texto, estrela ou imagem, e o link) vem todo do
+             objeto SELO no dados.js — aqui só se marca o lugar -->
+        <p class="badge" data-selo hidden></p>
+      </div>
+
+      <div class="rodape__colunas">
+
+        <div class="rodape__col">
+          <h2 data-i18n="rodape.navegar">Navegar</h2>
+          <ul>
+            <li><a href="#sobre"     data-i18n="nav.sobre">Sobre</a></li>
+            <li><a href="#servicos"  data-i18n="nav.servicos">Serviços</a></li>
+            <li><a href="#processo"  data-i18n="nav.processo">Como funciona</a></li>
+            <li><a href="#portfolio" data-i18n="nav.portfolio">Portfólio</a></li>
+            <li><a href="#contato"   data-i18n="nav.contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="rodape__col">
+          <h2 data-i18n="rodape.servicos">Serviços</h2>
+          <ul>
+            <li><a href="#servicos" data-i18n="rodape.s1">E-commerce completo</a></li>
+            <li><a href="#servicos" data-i18n="rodape.s2">Migração de plataforma</a></li>
+            <li><a href="#servicos" data-i18n="rodape.s3">Página de produto</a></li>
+            <li><a href="#servicos" data-i18n="rodape.s4">Landing page</a></li>
+          </ul>
+        </div>
+
+        <div class="rodape__col">
+          <h2 data-i18n="rodape.falar">Falar comigo</h2>
+          <ul>
+            <li><a data-zap="Olá, Gabriel! Vim pelo site e quero falar sobre um projeto." href="https://wa.me/5532999144851"
+                   data-i18n="rodape.whatsapp">WhatsApp</a></li>
+            <li><a data-insta data-i18n="rodape.instagram">Instagram</a></li>
+            <li><a data-email href="mailto:gabriel.cassa02@outlook.com" data-i18n="rodape.email">E-mail</a></li>
+            <li><span class="rodape__horario" data-i18n="rodape.horario">Seg a sex, 9h às 18h</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      <p>&copy; <span data-ano>2026</span> Studio Cassa · Gabriel Cassa</p>
+      <p data-i18n="rodape.local">São João del-Rei · MG</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ======================================================================
+     FLUTUANTES — aparecem depois de 400px de rolagem
+     ====================================================================== -->
+<div class="flutuantes">
+  <button class="flutuante flutuante--topo" type="button" data-topo tabindex="-1"
+          aria-label="Voltar ao topo" data-i18n="flut.topo" data-i18n-attr="aria-label">
+    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" d="M8 12.5v-9M4.5 7L8 3.5 11.5 7"/>
+    </svg>
+  </button>
+
+  <a class="flutuante flutuante--zap" href="https://wa.me/5532999144851" tabindex="-1"
+     data-zap="Olá, Gabriel! Vim pelo site e quero falar sobre um projeto."
+     aria-label="Falar no WhatsApp" data-i18n="flut.whatsapp" data-i18n-attr="aria-label">
+    <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.87 9.87 0 0 0 4.74 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2zm0 18.06h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14 0-.31-.01-.48-.01a.93.93 0 0 0-.67.31c-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.16 1.77 2.71 4.3 3.8.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.19.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ======================================================================
+     MODAL DE PROJETO — um só na página. O conteúdo é montado pelo site.js
+     a partir de PROJETOS no momento de abrir.
+     ====================================================================== -->
+<div class="modal" id="modal-projeto" role="dialog" aria-modal="true"
+     aria-labelledby="modal-titulo" hidden>
+  <div class="modal__painel">
+    <button class="modal__x" type="button" data-modal-fechar
+            aria-label="Fechar" data-i18n="modal.fechar" data-i18n-attr="aria-label">
+      <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              d="M4 4l8 8M12 4l-8 8"/>
+      </svg>
+    </button>
+    <div class="modal__corpo"></div>
+  </div>
+</div>
+
+<script src="assets/js/dados.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/render.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Pastas de trabalho: os prints e as logos CRUS entram aqui e não são
+# publicados. Quem publica as versões tratadas é o prepara-imagens.ps1,
+# que escreve em assets/img/portfolio/ e assets/img/logos/.
+_prints/
+_logos/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Fontes de arte (o que vai para o site é o export)
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# Documento de trabalho: fica no disco, nao no site publicado.
+# Contem notas internas (ex.: que ainda nao ha parceria Nuvemshop).
+PROMPT-VSCODE.md

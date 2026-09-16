@@ -1,0 +1,9 @@
+# studiocassa.com.br
+# O blog não é bloqueado aqui de propósito: ele sai do índice pelo
+# <meta name="robots" content="noindex"> das próprias páginas, e um
+# Disallow impediria o Google de LER esse noindex.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://studiocassa.com.br/sitemap.xml
